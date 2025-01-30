@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a0dad, #8a2be2);
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        select, input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        select {
+            background-color: #ffcc00;
+            color: #333;
+        }
+        input[type="number"] {
+            background-color: #ffcc00;
+            color: #333;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        button:active {
+            background-color: #1e7e34;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .images img {
+            width: 100px;
+            margin: 0 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Book Your Movie Tickets</h1>
+        
+        <div class="images">
+            <img src="https://popcornandcandyfloss.com/cdn/shop/files/Studio_Session-164-2_1.jpg?v=1693889555&width=2048" alt="Popcorn">
+            <img src="data:image/jpeg;base64,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" alt="3D Glasses">
+        </div>
+
+        <form id="bookingForm">
+            <label for="movie">Select Movie:</label>
+            <select id="movie" required>
+                <option value="">--Select a Movie--</option>
+                <option value="1">Movie 1</option>
+                <option value="2">Movie 2</option>
+                <option value="3">Movie 3</option>
+            </select>
+
+            <label for="seats">Number of Tickets:</label>
+            <input type="number" id="seats" min="1" max="10" required>
+
+            <button type="submit">Book Tickets</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const movie = document.getElementById('movie').value;
+            const seats = document.getElementById('seats').value;
+
+            // Here you would typically send the booking data to your server
+            alert(`You have booked ${seats} ticket(s) for Movie ID: ${movie}`);
+        });
+    </script>
+
+</body>
+</html>
